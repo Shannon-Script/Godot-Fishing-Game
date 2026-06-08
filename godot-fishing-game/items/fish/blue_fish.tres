@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://c1yhas8ryn81d"]
+
+[ext_resource type="Texture2D" uid="uid://bapvw36x30d4f" path="res://assets/fish/blue_fish.png" id="1_geepa"]
+[ext_resource type="Script" uid="uid://bmgy1an8ot3u5" path="res://resource_definitions/item.gd" id="2_1caug"]
+
+[resource]
+script = ExtResource("2_1caug")
+id = "FISH-blue"
+name = "Blue Fish"
+description = "He's oh-so blue"
+icon = ExtResource("1_geepa")
+icon_path = "res://assets/fish/blue_fish.png"
+metadata/_custom_type_script = "uid://bmgy1an8ot3u5"

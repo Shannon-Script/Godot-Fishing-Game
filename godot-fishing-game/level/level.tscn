@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dx1758ph1p47m"]
+
+[ext_resource type="Texture2D" uid="uid://bsft137jwn1rx" path="res://assets/landscapes/level1.png" id="1_7lnir"]
+
+[node name="Level" type="Node2D" unique_id=1523190807]
+z_index = -1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=320603009]
+texture = ExtResource("1_7lnir")
+centered = false
