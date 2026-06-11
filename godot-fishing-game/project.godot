@@ -11,13 +11,15 @@ config_version=5
 [application]
 
 config/name="Godot Fishing Game"
-run/main_scene="res://main.tscn"
+config/version="0.1"
+run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-InventoryManager="*uid://ujejdkm7721q"
+ItemDatabase="*uid://c1l6jcs12tqmn"
+SaveSystem="*uid://qob6snaxcjp1"
 
 [display]
 

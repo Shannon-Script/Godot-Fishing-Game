@@ -1,3 +1,4 @@
+# credit: https://www.strayspark.studio/blog/godot-4-inventory-crafting-system-complete-guide
 class_name Inventory
 extends Resource
 
@@ -10,7 +11,6 @@ signal inventory_full
 @export var max_slots: int = 16
 
 func _init() -> void:
-	print("inventory.gd _init")
 	_initialize_slots()
 	
 
@@ -19,6 +19,7 @@ func _initialize_slots() -> void:
 	for i in max_slots:
 		slots.append(InventorySlotData.new())
 	
+
 ## Attempts to add an item. Returns the number of items that could not be added
 func add_item(item: Item, amount: int = 1) -> int:
 	if item == null or amount <= 0:
@@ -111,3 +112,28 @@ func has_item(item_id: StringName, amount: int = 1) -> bool:
 ## Try to merge (stack) from on slot into another
 
 ## Split a stack
+
+# todo: remove if saving resource works
+func to_json_string() -> String:
+	var save_object = {}
+	for i in slots.size():
+		if not slots[i].is_empty():
+			var item_id = slots[i].item.id
+			var quantity = slots[i].quantity
+			save_object[i] = {
+				"item_id": item_id,
+				"quantity": quantity,
+			}
+
+	return JSON.stringify(save_object,"\t", false)
+
+
+# todo: remove if loading resource works
+func from_json_string(json_string: String) -> void: 
+	var data = JSON.parse_string(json_string)
+	for i in data.size():
+		if slots[i].is_empty():
+			# todo better cleaning/checking e.g. quantity > 0 of data
+			# slots[i].item = ItemDatabase.get_item_by_id(data[i].id)
+			# slots[i].quantity = data[i].quantity
+			pass

@@ -1,3 +1,4 @@
+# credit: https://www.strayspark.studio/blog/godot-4-inventory-crafting-system-complete-guide
 class_name InventorySlotData
 extends Resource
 

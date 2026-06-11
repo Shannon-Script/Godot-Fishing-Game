@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Fish" format=3 uid="uid://ckjpq0mrx3be"]
+
+[ext_resource type="Script" uid="uid://bd6fkuu26mnri" path="res://resource_definitions/fish.gd" id="1_8gy2h"]
+[ext_resource type="Texture2D" uid="uid://b0goal0dbe3pg" path="res://assets/fish/red_fish.png" id="1_ay38w"]
+
+[resource]
+script = ExtResource("1_8gy2h")
+available_times = Array[int]([0, 1])
+rarity = 70
+region_id = &"REGION-Level1"
+id = &"FISH-red"
+name = "Red Fish"
+description = "He angry"
+icon = ExtResource("1_ay38w")
+icon_path = "res://assets/fish/red_fish.png"
+max_stack = 5
+metadata/_custom_type_script = "uid://bd6fkuu26mnri"

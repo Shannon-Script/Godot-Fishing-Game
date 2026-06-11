@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Fish" format=3 uid="uid://cbacuwdt6g4l3"]
+
+[ext_resource type="Texture2D" uid="uid://bapvw36x30d4f" path="res://assets/fish/blue_fish.png" id="1_cfguu"]
+[ext_resource type="Script" uid="uid://bd6fkuu26mnri" path="res://resource_definitions/fish.gd" id="1_qpyfr"]
+
+[resource]
+script = ExtResource("1_qpyfr")
+available_times = Array[int]([0, 1, 2, 3])
+region_id = &"REGION-Level2"
+id = &"FISH-blue"
+name = "Blue Fish"
+description = "He so blue"
+icon = ExtResource("1_cfguu")
+icon_path = "res://assets/fish/blue_fish.png"
+metadata/_custom_type_script = "uid://bd6fkuu26mnri"

@@ -9,7 +9,6 @@ var _slots: Array[InventorySlot] = []
 
 
 func setup(inventory: Inventory) -> void:
-	print("!!!inventory_ui.gd setup")
 	_inventory = inventory
 	
 	_inventory.item_added.connect(_on_slot_updated)
@@ -28,7 +27,6 @@ func setup(inventory: Inventory) -> void:
 
 
 func _build_grid() -> void:
-	print("build grid")
 	# clear existing
 	for child in grid_container.get_children():
 		child.queue_free()
