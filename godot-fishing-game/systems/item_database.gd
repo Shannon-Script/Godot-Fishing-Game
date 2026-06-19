@@ -8,7 +8,7 @@ var _fishes: Dictionary = {}
 func _ready() -> void:
 	_load_all_items("res://items/")
 	_load_all_items("user://items/")
-	print("_fishes = %s" % _fishes)
+	#print("_fishes = %s" % _fishes)
 	
 
 func _load_all_items(path: String) -> void:
@@ -33,13 +33,14 @@ func _load_all_items(path: String) -> void:
 					_items[resource.id] = resource
 					# todo: this will likely need to be in its own function but this works for now
 					#	-> main issue being the earlier logic about skipping repeat ids
-					if resource.item_type == Item.Type.FISH:
+					#if resource.item_type == Item.Type.FISH:
+					if resource.resource_type == Game.ResourceType.FISH:
 						_fishes[resource.id] = resource
 		# todo: add elif for .json files
 		elif file_name.ends_with(".json"):
 			var file = FileAccess.open(full_path, FileAccess.READ)
 			var json_string = file.get_as_text()
-			if _get_resource_type(json_string) == Game.ResourceType.ITEM:
+			if _get_resource_type(json_string) == Game.ResourceType.FISH:
 				print(full_path)
 				print("is item")
 				# skipping the fish check for debugging. This whole db needs to be redone. We'll want a fish db, decoration db, location db... etc
@@ -78,13 +79,18 @@ func get_all_items() -> Array[Item]:
 func get_all_fish() -> Array[Fish]:
 	var result: Array[Fish] = []
 	for item in _items.values():
-		if item.item_type == Item.Type.FISH:
+		if item.resource_type == Game.ResourceType.FISH:
 			result.append(item)
 	return result
 
-func get_all_fish_in(region_id: StringName) -> Array[Fish]:
+func get_all_fish_in(level_id: StringName) -> Array[Fish]:
 	var result: Array[Fish] = []
 	for item in _items.values():
-		if item.item_type == Item.Type.FISH && item.region_id == region_id:
+		if item.resource_type == Game.ResourceType.FISH && item.level_id == level_id:
 			result.append(item)
 	return result
+
+func get_fish_with(id: StringName) -> Fish:
+	if _items.has(id):
+		return _items[id]
+	return null

@@ -5,8 +5,7 @@
 
 [resource]
 script = ExtResource("1_qpyfr")
-available_times = Array[int]([0, 1, 2, 3])
-region_id = &"REGION-Level2"
+active_times = Array[int]([0, 4, 12, 16])
 id = &"FISH-blue"
 name = "Blue Fish"
 description = "He so blue"

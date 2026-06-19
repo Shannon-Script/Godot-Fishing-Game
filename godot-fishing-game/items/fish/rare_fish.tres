@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Fish" format=3 uid="uid://dfdd6crnx7r63"]
+
+[ext_resource type="Script" uid="uid://bd6fkuu26mnri" path="res://resource_definitions/fish.gd" id="1_a25hj"]
+[ext_resource type="Texture2D" uid="uid://c6t70hsog53mm" path="res://assets/fish/rare_fish.png" id="1_ngee8"]
+
+[resource]
+script = ExtResource("1_a25hj")
+active_times = Array[int]([0, 4, 12, 16])
+rarity = 25
+id = &"FISH-rare"
+name = "Rare"
+description = "Rare description"
+icon = ExtResource("1_ngee8")
+icon_path = "res://assets/fish/rare_fish.png"
+max_stack = 5
+metadata/_custom_type_script = "uid://bd6fkuu26mnri"

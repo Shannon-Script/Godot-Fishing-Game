@@ -4,31 +4,31 @@ extends Item
 ## Fish Rarity as percentages (1-100)
 enum Rarity {
 	COMMON = 100,
-	UNCOMMON = 45,
+	UNCOMMON = 50,
 	RARE = 25,
-	VERY_RARE = 10,
+	EPIC = 10,
 	LEGENDARY = 1,
 }
 
-@export var available_times: Array[Game.TIME]
+@export var active_times: Array[TimeManager.TimeOfDay]
 @export var rarity: Rarity = Rarity.COMMON
-@export var region_id: StringName
 
-var item_type: Item.Type = Type.FISH
+
+func _init() -> void:
+	resource_type = Game.ResourceType.FISH
 
 
 func to_json_string() -> String:
 	var save_object = {
-		"resource_type" : Game.ResourceType.ITEM,
-		"item_type" : Item.Type.FISH,
+		"resource_type" : Game.ResourceType.FISH,
 		"id" : id,
 		"name" : name,
 		"description": description,
 		"icon_path": icon_path,
 		"max_stack": max_stack,
 		"rarity": rarity,
-		"region_id": region_id,
-		"available_times": available_times,
+		"active_times": active_times,
+		#"game_version": ProjectSettings.get_setting("application/config/version"),
 	}
 	return JSON.stringify(save_object,"\t", false)
 
@@ -43,9 +43,7 @@ func from_json_string(json_string: String) -> void:
 	icon_path = data.icon_path
 	max_stack = int(data.max_stack)
 	rarity = int(data.rarity) as Rarity
-	region_id = data.region_id
-	available_times = _to_int_array(data.available_times) as Array[Game.TIME]
-	#item_type = int(data.item_type) as Item.Type
+	active_times = _to_int_array(data.active_times) as Array[TimeManager.TimeOfDay]
 
 
 func _to_int_array(array: Array) -> Array[int]:

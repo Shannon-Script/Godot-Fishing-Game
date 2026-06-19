@@ -5,9 +5,8 @@
 
 [resource]
 script = ExtResource("1_8gy2h")
-available_times = Array[int]([0, 1])
+active_times = Array[int]([0, 4, 12, 16])
 rarity = 70
-region_id = &"REGION-Level1"
 id = &"FISH-red"
 name = "Red Fish"
 description = "He angry"

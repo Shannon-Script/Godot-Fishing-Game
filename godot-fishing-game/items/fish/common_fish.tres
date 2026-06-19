@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Fish" format=3 uid="uid://uvwwjuyerkoc"]
+
+[ext_resource type="Texture2D" uid="uid://cxa2a6cxhn7jq" path="res://assets/fish/common_fish.png" id="1_ig8km"]
+[ext_resource type="Script" uid="uid://bd6fkuu26mnri" path="res://resource_definitions/fish.gd" id="2_0720k"]
+
+[resource]
+script = ExtResource("2_0720k")
+active_times = Array[int]([0, 4, 12, 16])
+id = &"FISH-common"
+name = "Common"
+description = "Common description"
+icon = ExtResource("1_ig8km")
+icon_path = "res://assets/fish/common_fish.png"
+max_stack = 10
+metadata/_custom_type_script = "uid://bd6fkuu26mnri"

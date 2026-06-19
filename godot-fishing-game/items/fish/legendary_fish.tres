@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Fish" format=3 uid="uid://vtex22snsj1l"]
+
+[ext_resource type="Texture2D" uid="uid://i6voln6rc2sn" path="res://assets/fish/legendary_fish.png" id="1_7s6f7"]
+[ext_resource type="Script" uid="uid://bd6fkuu26mnri" path="res://resource_definitions/fish.gd" id="1_ur8qo"]
+
+[resource]
+script = ExtResource("1_ur8qo")
+active_times = Array[int]([0, 4, 12, 16])
+rarity = 1
+id = &"FISH-legendary"
+name = "Legendary"
+description = "Legendary description"
+icon = ExtResource("1_7s6f7")
+icon_path = "res://assets/fish/legendary_fish.png"
+metadata/_custom_type_script = "uid://bd6fkuu26mnri"
