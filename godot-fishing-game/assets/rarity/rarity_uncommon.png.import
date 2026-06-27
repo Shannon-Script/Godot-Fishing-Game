@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://em00d7t8wksb"
-path="res://.godot/imported/epic_fish.png-1e9697c27590211b791ed145ff9b9a42.ctex"
+uid="uid://djnw8mh7v2oej"
+path="res://.godot/imported/rarity_uncommon.png-7a5a1da34204a70485f45aa590bffe35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fish/epic_fish.png"
-dest_files=["res://.godot/imported/epic_fish.png-1e9697c27590211b791ed145ff9b9a42.ctex"]
+source_file="res://assets/rarity/rarity_uncommon.png"
+dest_files=["res://.godot/imported/rarity_uncommon.png-7a5a1da34204a70485f45aa590bffe35.ctex"]
 
 [params]
 

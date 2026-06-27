@@ -117,4 +117,5 @@ func take_random_fish_from_pool() -> Fish:
 # todo: consider a return fish to pool function
 # example use case: player doesn't catch fish / skips the fishing
 func return_fish_to_pool(fish: Fish) -> void:
-	pass
+	if _current_active_fish.has(fish):
+		_fish_id_pool.append(fish.id)

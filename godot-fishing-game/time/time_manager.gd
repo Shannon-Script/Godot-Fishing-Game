@@ -20,8 +20,13 @@ signal time_of_day_changed(new_time_of_day: TimeOfDay)
 @export var ticks_per_second: int = 40
 
 var current_time_of_day: TimeOfDay
+var is_paused: bool = false
 
 func _process(delta: float) -> void:
+	# todo: have menus pause or fire signal
+	if is_paused:
+		return
+		
 	game_time.increase_by_seconds(delta * ticks_per_second)
 
 func _ready() -> void:

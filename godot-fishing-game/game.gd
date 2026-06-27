@@ -2,12 +2,12 @@ class_name Game
 extends Node
 
 ## The different times of day
-enum TIME {
-	MORNING,
-	MIDDAY,
-	SUNSET,
-	NIGHT,
-}
+#enum TIME {
+	#MORNING,
+	#MIDDAY,
+	#SUNSET,
+	#NIGHT,
+#}
 
 ## The different types of resources
 enum ResourceType {
@@ -22,10 +22,9 @@ var inventory: Inventory
 var inventory_ui: InventoryUI
 
 # debug vars
-var current_time:TIME = TIME.MORNING
-var current_location: StringName = "LEVEL-1"
+# var current_time:TIME = TIME.MORNING
+# var current_location: StringName = "LEVEL-1"
 var test_location: Location = Location.new()
-
 
 
 func _ready() -> void:

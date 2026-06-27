@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_8gy2h")
 active_times = Array[int]([0, 4, 12, 16])
-rarity = 70
+rarity = 25
 id = &"FISH-red"
 name = "Red Fish"
 description = "He angry"
